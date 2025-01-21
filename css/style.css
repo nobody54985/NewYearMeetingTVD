@@ -362,7 +362,7 @@ body {
 .meetingClass-info {
   background-color: rgb(16, 16, 16);
   color: white;
-  padding: 5px 15px;
+  padding: 10px 20px;
   text-align: center;
 }
 
@@ -396,7 +396,7 @@ body {
 .address-info p {
   font-size: 16px;
   color: #555;
-  line-height: 1.0;
+  line-height: 1.6;
   text-align: left;
 }
 
@@ -423,7 +423,7 @@ body {
 
 .qr-code-container img {
   width: 100%;
-  max-width: 300px; /* Giới hạn kích thước tối đa của hình ảnh */
+  max-width: 300px;
   height: auto;
   border-radius: 8px;
   border: 2px solid #ddd;
@@ -433,28 +433,39 @@ body {
   transition: transform 0.3s ease;
 }
 
-@media screen and (max-width: 768px) {
-  .qr-code-container img {
-    padding: 5px; /* Giảm khoảng cách cho màn hình nhỏ hơn */
-    border-width: 1px;
-  }
-}
-
 .qr-code-container img:hover {
   transform: scale(1.05);
 }
 
 /* Responsive adjustments */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
+  .meetingClass-detail {
+    flex-direction: column;
+  }
+
   .meetingClass-info h1 {
     font-size: 28px;
   }
 
-  .meetingClass-detail {
-    flex-direction: column;
+  .qr-banking p {
+    font-size: 14px;
   }
 }
 
+@media screen and (max-width: 768px) {
+  .qr-code-container img {
+    padding: 5px;
+    border-width: 1px;
+  }
+
+  .address-info p {
+    font-size: 14px;
+  }
+
+  .map-container iframe {
+    height: 300px;
+  }
+}
 
 /* Contact section */
 .contact-info {
