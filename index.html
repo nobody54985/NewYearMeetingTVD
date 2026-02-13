@@ -1,10 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Memorables TVD 2013-2016</title>
+
+  <!-- SEO Meta Tags -->
+  <title>Kỷ Niệm TVD 2013-2016 | Blog Lưu Giữ Ký Ức Trường THPT Trần Văn Dư</title>
+  <meta name="description"
+    content="Nơi lưu giữ những kỷ niệm đẹp nhất của học sinh Trường THPT Trần Văn Dư khóa 2013-2016. Chia sẻ những câu chuyện, hình ảnh và khoảnh khắc đáng nhớ của tuổi học trò." />
+  <meta name="keywords" content="THPT Trần Văn Dư, TVD 2013-2016, kỷ niệm học trò, blog kỷ niệm, ký ức tuổi học trò" />
+  <meta name="author" content="LVT" />
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Kỷ Niệm TVD 2013-2016 | Blog Lưu Giữ Ký Ức" />
+  <meta property="og:description"
+    content="Nơi lưu giữ những kỷ niệm đẹp nhất của học sinh Trường THPT Trần Văn Dư khóa 2013-2016" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/hero.jpg" />
+
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -20,21 +35,29 @@
     <!-- Header Section -->
     <header>
       <div class="logo">
-        <img src="assets/logo.png" alt="Logo" />
+        <img src="assets/logo.png" alt="Logo Trường THPT Trần Văn Dư" />
       </div>
       <nav>
         <ul>
-          <li><a href="index.html">TRANG CHỦ</a></li>
-          <li><a href="contact.html">LIÊN HỆ</a></li>
+          <li><a href="#home">TRANG CHỦ</a></li>
+          <li><a href="#memories">KỶ NIỆM</a></li>
+          <li><a href="#timeline">TIMELINE</a></li>
+          <li><a href="#contact">LIÊN HỆ</a></li>
+          <li>
+            <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
+              <i class="fas fa-moon"></i>
+            </button>
+          </li>
         </ul>
       </nav>
     </header>
 
     <!-- Hero Banner Section -->
-    <section class="hero">
+    <section id="home" class="hero">
       <div class="hero-text">
-        <h1>Trường THPT Trần Văn Dư </h1>
+        <h1>Trường THPT Trần Văn Dư</h1>
         <h2>2013 - 2016</h2>
+        <p class="hero-subtitle">Nơi lưu giữ những kỷ niệm đẹp nhất</p>
       </div>
     </section>
   </div>
@@ -42,30 +65,31 @@
   <!-- Featured Products Section -->
   <section class="featured-products">
     <div class="product-grid">
-      <div class="product-item">
-        <img src="assets/past.png" alt="Product 1" />
+      <article class="product-item">
+        <img src="assets/past.png" alt="Biểu tượng quá khứ - Kỷ niệm học trò" />
         <h3>QUÁ KHỨ</h3>
         <p>
           Gắn kết từ những ký ức – Nơi mọi kỷ niệm bắt đầu.
         </p>
-      </div>
-      <div class="product-item">
-        <img src="assets/presen.png" alt="Product 2" />
+      </article>
+      <article class="product-item">
+        <img src="assets/presen.png" alt="Biểu tượng hiện tại - Kết nối ngày hôm nay" />
         <h3>HIỆN TẠI</h3>
         <p>
           Sống trọn từng khoảnh khắc – Khai mở mọi tiềm năng!
         </p>
-      </div>
-      <div class="product-item">
-        <img src="assets/future.png" alt="Product 3" />
+      </article>
+      <article class="product-item">
+        <img src="assets/future.png" alt="Biểu tượng tương lai - Ước mơ phía trước" />
         <h3>TƯƠNG LAI</h3>
         <p>
           Chinh phục đỉnh cao – Cất cánh cùng ước mơ!
         </p>
-      </div>
+      </article>
     </div>
   </section>
 
+  <!-- Introduction Section -->
   <section class="introduction-section">
     <div class="intro-content">
       <div class="intro-text">
@@ -94,47 +118,88 @@
             gặp gỡ. Hãy để những ký ức đẹp trở thành nguồn cảm hứng kết nối mãi mãi!</strong></p>
       </div>
       <div class="intro-image">
-        <img src="assets/space.png" alt="Introduction Image" />
+        <img src="assets/space.png" alt="Hình ảnh kỷ niệm học trò" loading="lazy" />
       </div>
     </div>
   </section>
 
-  <!-- Design Products Section -->
+  <!-- Blog/Memories Section with Search and Filter -->
+  <section id="memories" class="blog-section">
+    <div class="blog-header">
+      <h1>Kho Lưu Trữ Kỷ Niệm</h1>
+      <p class="blog-subtitle">Những câu chuyện và hình ảnh đáng nhớ của chúng ta</p>
+    </div>
+
+    <!-- Search and Filter Controls -->
+    <div class="blog-controls">
+      <div class="search-container">
+        <i class="fas fa-search"></i>
+        <input type="text" id="searchInput" placeholder="Tìm kiếm kỷ niệm..." aria-label="Tìm kiếm kỷ niệm" />
+      </div>
+      <div class="filter-container">
+        <button class="filter-btn active" data-category="all">Tất cả</button>
+        <button class="filter-btn" data-category="events">Sự kiện</button>
+        <button class="filter-btn" data-category="classroom">Lớp học</button>
+        <button class="filter-btn" data-category="trips">Chuyến đi</button>
+        <button class="filter-btn" data-category="graduation">Tốt nghiệp</button>
+      </div>
+    </div>
+
+    <!-- Blog Posts Grid (will be populated by JavaScript) -->
+    <div id="blogGrid" class="blog-grid">
+      <!-- Content will be dynamically loaded -->
+    </div>
+
+    <div id="noResults" class="no-results" style="display: none;">
+      <i class="fas fa-search"></i>
+      <p>Không tìm thấy kỷ niệm nào phù hợp</p>
+    </div>
+  </section>
+
+  <!-- Timeline Section -->
+  <section id="timeline" class="timeline-section">
+    <h1>Dòng Thời Gian Kỷ Niệm</h1>
+    <div class="timeline-container">
+      <!-- Timeline items will be populated by JavaScript -->
+    </div>
+  </section>
+
+  <!-- Design Products Section (Gallery) -->
   <section class="design-products">
     <h1>Cùng nhìn lại những kỷ niệm thời áo trắng</h1>
     <div class="design-item-heading">
-      <img src="assets/view5.png" alt="Chia tay thực tập Image" />
+      <img src="assets/view5.png" alt="Chia tay thực tập" class="gallery-image" loading="lazy" />
       <p>
         Cảm ơn thầy cô đã mang đến những bài học quý giá, dù thời gian ngắn ngủi nhưng ấm áp và đầy ý nghĩa.
       </p>
     </div>
     <div class="design-grid">
       <div class="design-item">
-        <img src="assets/view1.png" alt="Áo lớp Image" />
+        <img src="assets/view1.png" alt="Áo lớp - Kỷ niệm thanh xuân" class="gallery-image" loading="lazy" />
         <p>
           Áo lớp không chỉ là vải, mà là kỷ niệm của một thời thanh xuân.
         </p>
       </div>
       <div class="design-item">
-        <img src="assets/view2.png" alt="Thể dục Image" />
+        <img src="assets/view2.png" alt="Tiết học thể dục cuối cùng" class="gallery-image" loading="lazy" />
         <p>
           Tiết học cuối cùng, đồng phục thể dục cùng chúng ta, gắn kết từng bước chân, từng tiếng cười.
         </p>
       </div>
       <div class="design-item">
-        <img src="assets/view3.png" alt="Cổng Trường Image" />
+        <img src="assets/view3.png" alt="Cổng trường - Nơi hẹn ước" class="gallery-image" loading="lazy" />
         <p>
           Trước cổng trường, nơi chúng ta hứa với nhau những ước mơ và hy vọng.
         </p>
       </div>
       <div class="design-item">
-        <img src="assets/view7.png" alt="Nữ Sinh Image" />
+        <img src="assets/view7.png" alt="Nữ sinh TVD" class="gallery-image" loading="lazy" />
         <p>
           Những nữ sinh ấy, mang trong mình sức mạnh, sự tự tin và trái tim đầy yêu thương.
         </p>
       </div>
       <div class="design-item">
-        <img src="assets/view6.png" alt="Nữ Sinh Image" />
+        <img src="assets/view6.png" alt="Tượng đài Mẹ Thứ" class="gallery-image" loading="lazy" />
         <p>
           Kỷ niệm tại tượng đài Mẹ Thứ - Tượng Mẹ Việt Nam Anh Hùng
         </p>
@@ -142,34 +207,46 @@
     </div>
   </section>
 
-  <!-- Modal for image display -->
-  <!-- <div id="image-modal" class="modal">
-    <span class="close">&times;</span>
-    <img class="modal-content" id="modal-image">
-  </div> -->
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="lightbox-close" aria-label="Close lightbox">
+      <i class="fas fa-times"></i>
+    </button>
+    <button class="lightbox-prev" aria-label="Previous image">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    <button class="lightbox-next" aria-label="Next image">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+    <div class="lightbox-content">
+      <img id="lightboxImage" src="" alt="" />
+      <p id="lightboxCaption"></p>
+    </div>
+  </div>
 
   <!-- Contact Information Section-->
-  <section class="meetingClass-info">
-    <h1>THÔNG TIN HỌP LỚP 2025</h1>
+  <section id="contact" class="meetingClass-info">
+    <h1>THÔNG TIN HỌP LỚP 2026</h1>
     <div class="meetingClass-detail">
       <!-- Address Information -->
       <div class="address-info">
         <h2>Địa điểm tổ chức</h2>
-        <p><strong>Address:</strong> Đối diện Trường Tiểu Học Nguyễn Trãi Cơ Sở 2 (Nhà bạn Thành-Sương)</p>
-        <p><strong>Thời gian:</strong> 16h 01/02/2025</p>
+        <p><strong>Address:</strong> Tại nhà bạn Hải (Xã TAM ĐÀN cũ) - 032 9898 812</p>
+        <p><strong>Thời gian:</strong> 16h30 20/02/2026</p>
         <div class="map-container">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1691.1556175634066!2d108.44268958912066!3d15.609835348456004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3169dd93d5ddc949%3A0x1237f8656d660a36!2zVHLGsOG7nW5nIFRp4buDdSBI4buNYyBOZ3V54buFbiBUcsOjaSBDxqEgU-G7nyAy!5e1!3m2!1svi!2s!4v1737163970424!5m2!1svi!2s"
-            allowfullscreen="" aria-hidden="false" tabindex="0">
-          </iframe>
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1185.8872071454614!2d108.45485350233501!3d15.598326020802666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1svi!2s!4v1771003563459!5m2!1svi!2s"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" title="Bản đồ địa điểm họp lớp"></iframe>
         </div>
       </div>
 
-      <!-- Address Information -->
+      <!-- Google Form -->
       <div class="google-doc">
         <iframe
           src="https://docs.google.com/forms/d/e/1FAIpQLSfK0sADQtsx3Ff5ycPLtiW52WYwyxmZ9iS_7w5DCh8evq1TfQ/viewform?embedded=true"
-          width="100%" height="650px" frameborder="0" marginheight="0" style="border: none;" marginwidth="0">Đang
+          width="100%" height="650px" frameborder="0" marginheight="0" style="border: none;" marginwidth="0"
+          title="Form đăng ký tham gia">Đang
           tải…</iframe>
       </div>
 
@@ -177,11 +254,11 @@
       <div class="qr-banking">
         <h2>Thông tin chuyển khoản!</h2>
         <p>
-          Nếu bạn đồng ý tham gia, vui lòng quét mã và chuyển khoản 150k (VD: TÊN + A1) để Ban Tổ Chức nắm
+          Nếu bạn đồng ý tham gia, vui lòng quét mã và chuyển khoản 300k (VD: TÊN + A1) để Ban Tổ Chức nắm
           số lượng và sắp xếp chỗ ngồi. <br>Xin cảm ơn!
         </p>
         <div class="qr-code-container">
-          <img src="assets/qr.png" alt="QR Code">
+          <img src="assets/qr.png" alt="Mã QR chuyển khoản" loading="lazy">
         </div>
       </div>
     </div>
@@ -193,12 +270,10 @@
     <div class="contact-details">
       <div class="contact-item">
         <span class="icon"><i class="fas fa-phone-alt"></i></span>
-        <!-- Phone Icon -->
         <span>Hotline: 0329898812 (Mr.Nhạc) - 0397793888 (Mr.Thức)</span>
       </div>
       <div class="contact-item">
         <span class="icon"><i class="fas fa-clock"></i></span>
-        <!-- Clock Icon -->
         <span>Hoạt động: 24/7</span>
       </div>
     </div>
@@ -214,23 +289,14 @@
       </div>
     </div>
   </footer>
-  <!-- <script>
-    var modal = document.getElementById("image-modal");
 
-    var images = document.querySelectorAll(".design-products .design-item img");
-    var modalImage = document.getElementById("modal-image");
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="back-to-top" aria-label="Quay lại đầu trang">
+    <i class="fas fa-arrow-up"></i>
+  </button>
 
-    images.forEach(function(image) {
-      image.addEventListener("click", function() {
-        modal.style.display = "block";
-        modalImage.src = this.src;
-      });
-    });
-    var closeBtn = document.querySelector(".close");
-    closeBtn.addEventListener("click", function() {
-      modal.style.display = "none";
-    });
-  </script> -->
+  <!-- JavaScript -->
+  <script src="scrips.js"></script>
 </body>
 
 </html>
